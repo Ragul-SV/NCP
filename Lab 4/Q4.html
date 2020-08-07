@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Q4 </title>
+	<script type="text/javascript">
+		var fibonacci_series = function (n) 
+		{
+			if (n===1) 
+			{
+				return [0, 1];
+			} 
+			else 
+			{
+				var s = fibonacci_series(n - 1);
+				s.push(s[s.length - 1] + s[s.length - 2]);
+				return s;
+			}
+		};
+		function fibonacci(){
+			var val = document.getElementById("number").value
+			arr = fibonacci_series(val)
+			for(var i=0;i<arr.length;i++)
+				document.getElementById("fib").innerHTML += "<p>"+arr[i]+"</p>"
+		}
+	</script>
+</head>
+<body>	
+	<form">
+	Enter the number: <input id="number" type="number">
+	<input type="submit" onclick="fibonacci();return false;">
+</form>
+<h2>The Fibonacci series is:</h2>
+<h2 id="fib"></h2>
+</body>
+</html>
