@@ -1,0 +1,21 @@
+<html>
+    <body id="id"></body>
+    <script>
+        var string = prompt("Enter Here:");
+
+        function reverseSort(string) {
+            try {
+                temp = string.split(" ");
+            } catch {
+                console.log("Input is not String");
+                return "Input is not String";
+            }
+            console.log(temp);
+            temp.sort();
+            temp.reverse();
+            return temp;
+        }
+
+        document.getElementById("id").innerText = reverseSort(string);
+    </script>
+</html>

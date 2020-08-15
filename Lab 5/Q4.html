@@ -1,0 +1,55 @@
+<html>
+    <body id="id"></body>
+    <script>
+        var date = prompt("Enter Date");
+        split = date.split("-");
+        var day, month, year;
+        res = true;
+
+        if (split[0].length != 2 || split[1].length != 2 || split[2].length != 4) res = false;
+        console.log(split);
+        try {
+            day = parseInt(split[0]);
+            month = parseInt(split[1]);
+            year = parseInt(split[2]);
+        } catch {
+            res = false;
+            console.log("Parse Failed");
+        }
+
+        if (day <= 0 || day >= 32) {
+            res = false;
+            console.log("Invalid Day");
+        }
+
+        if (month <= 0 || month >= 13) {
+            console.log("Invalid Month");
+        }
+
+        if (split[1] == "02") {
+            if (split[0] == "29") {
+                if ((year % 100 == 0 && year % 400 != 0) || year % 4 != 0) {
+                    console.log("Invalid Leap Day");
+                    res = false;
+                }
+            }
+
+            if (split[0] == "30" || split[0] == "31") {
+                console.log("Invalid Feb Day");
+                res = false;
+            }
+        }
+
+        if (split[0] == "31") {
+            months_31 = ["01", "03", "05", "07", "08", "10", "12"];
+            res = months_31.includes(split[1]);
+            console.log("Invalid 31st Day");
+        }
+
+        if (res) {
+            document.getElementById("id").innerText = date + " is Valid.";
+        } else {
+            document.getElementById("id").innerText = date + " is Invalid.";
+        }
+    </script>
+</html>

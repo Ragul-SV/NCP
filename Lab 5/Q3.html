@@ -1,0 +1,31 @@
+<html>
+    <body id="id"></body>
+    <script>
+        var string = prompt("Hey enter something.");
+        words = string.split(" ");
+
+        arr = [];
+
+        try {
+            for (word of words) arr.push(parseInt(word));
+        } catch {
+            console.log("Parse Error");
+            return;
+        }
+
+        var len = arr.length;
+        var MAX = Math.max(...arr);
+        for (var j = 0; j < MAX; j++) {
+            res = "";
+            for (var i = 0; i < len; i++) {
+                if (arr[i] > 0) {
+                    res += "#";
+                    arr[i] -= 1;
+                } else {
+                    res += " ";
+                }
+            }
+            console.log(res);
+        }
+    </script>
+</html>
