@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: #FFB300;
+            }
+            div{
+                text-align: center;
+            }
+            .clock {
+                position: absolute;
+                color:#212121;
+                top: 40%;
+                left: 50%;
+                font-size: 80px;
+                transform: translateX(-50%) translateY(-50%);
+            }
+            .stopwatch_controls {
+                position: absolute;
+                color:#212121;
+                top: 60%;
+                left: 50%;
+                font-size: 80px;
+                transform: translateX(-50%) translateY(-50%);
+            }
+            .stopwatch_controls input {
+                vertical-align: middle;
+                height: 30px;
+                width: 50px;
+                box-shadow: darkred;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="clock" class="clock"></div>
+        
+        <div class="stopwatch_controls">
+           <span id="stopwatch" class="stopwatch"></span>        
+        </div>
+        <div style="font-size: 2em;">
+            <h4>Clock & Stopwatch</h4>
+        <input type="button" id="startButton" value="Start" />
+            <input type="button" id="stopButton" value="Stop" />
+            <input type="button" id="resetButton" value="Reset" />
+        </div>
+    </body>
+    <script src="q4.js"></script>
+</html>
