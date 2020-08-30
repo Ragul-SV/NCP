@@ -1,0 +1,225 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,300,600,400italic);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 30px;
+    color: white;
+    background: linear-gradient(to right, #6441a5, #2a0845);
+}
+
+.container {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#register input[type="text"],
+#register input[type="email"],
+#register input[type="tel"],
+#register input[type="url"],
+#register select,
+#register textarea,
+#register button[type="submit"] {
+    font: 400 12px/16px "Montserrat", sans-serif;
+}
+
+#register {
+    background: linear-gradient(to right, #dc2424, #4a569d);
+    padding: 25px;
+    margin: 50px 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#register h3 {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+#register h4 {
+    margin: 5px 0 15px;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+#register #mail1:hover,
+#register #mail2:hover,
+#register select:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
+}
+
+.age-range {
+    padding-right: 10px;
+}
+
+.gender span {
+    border: 1px solid #ccc;
+    background: #fff;
+    margin: 5px 5px 15px;
+    padding: 10px;
+}
+
+div .margin {
+    height: 10px;
+}
+
+#register #mail1,
+#register #mail2 {
+    width: 45%;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin: 0 0 5px;
+    padding: 10px;
+}
+
+.at {
+    padding: 1.5%;
+}
+
+#register [type="text"],
+#register [type="tel"],
+#register [type="url"],
+#register textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin: 0 0 5px;
+    padding: 10px;
+}
+
+#register input[type="text"]:hover,
+#register input[type="tel"]:hover,
+#register input[type="url"]:hover,
+#register textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+button:hover span {
+    padding-right: 25px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+button:after {
+    content: '';
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+#register textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+
+#register button[type="submit"] {
+    display: inline-block;
+    margin: 0 0 5px;
+    border-radius: 4px;
+    position: relative;
+    background-color: #f4511e;
+    border: none;
+    font-size: 28px;
+    color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    background: linear-gradient(to right, #000000, #0f9b0f);
+    color: white;
+}
+
+#register .gender span label
+{
+	color:black;
+}
+
+#register button[type="submit"]:hover {
+	background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    color: white;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#register button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+    text-align: center;
+}
+
+#register input:focus,
+#register textarea:focus {
+    outline: 0;
+    border: 2px solid #1976D2;
+}
+
