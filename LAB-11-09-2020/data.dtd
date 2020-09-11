@@ -1,0 +1,12 @@
+
+<!ELEMENT survey (region,location,feature,rov,area,depth,dist,shipping,items)>
+<!ELEMENT region (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT feature (#PCDATA)>
+<!ELEMENT rov (#PCDATA)>
+<!ELEMENT area (#PCDATA)>
+<!ELEMENT depth (#PCDATA)>
+<!ELEMENT dist (#PCDATA)>
+<!ELEMENT shipping (#PCDATA)>
+<!ELEMENT items (#PCDATA)>
+
